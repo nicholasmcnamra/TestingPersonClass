@@ -30,6 +30,25 @@ public class Person {
         this.age = age;
     }
 
+    public Person(int age, boolean hasHouse, int creditScore) {
+        this.age = age;
+        this.hasHouse = hasHouse;
+        this.creditScore = creditScore;
+    }
+
+    public Person(boolean hasHouse, boolean likesChocolate) {
+        this.likesChocolate = likesChocolate;
+    }
+
+    public Person(String homeTown, String school) {
+        this.homeTown = homeTown;
+        this.school = school;
+    }
+
+    public Person(String name, int age, String school) {
+        this.school = school;
+    }
+
     public void setName(String name) {
         this.name = name;
     }

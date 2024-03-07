@@ -95,4 +95,59 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testConstructorWithAgeHasHouseCreditScore() {
+        int expectedAge = 20;
+        boolean expectedHasHouse = true;
+        int expectedCreditScore = 650;
+        Person person = new Person();
+
+        person.setAge(expectedAge);
+        person.setHasHouse(expectedHasHouse);
+        person.setCreditScore(expectedCreditScore);
+
+        int actualAge = person.getAge();
+        boolean actualHasHouse = person.getHasHouse();
+        int actualCreditScore = person.getCreditScore();
+        Assert.assertEquals(expectedAge, actualAge);
+        Assert.assertTrue(expectedHasHouse);
+        Assert.assertEquals(expectedCreditScore, actualCreditScore);
+    }
+
+    @Test
+    public void testConstructorSchool() {
+        String expectedSchool = "University of California";
+
+        Person person = new Person();
+
+        person.setSchool(expectedSchool);
+
+        String actualSchool = person.getSchool();
+        Assert.assertEquals(expectedSchool, actualSchool);
+    }
+
+    @Test
+    public void testConstuctorLikesChocolate() {
+        boolean expectedLikesChocolate = true;
+
+        Person person = new Person();
+
+        person.setLikesChocolate(expectedLikesChocolate);
+
+        boolean actualLikesChocolate = person.getLikesChocolate();
+        Assert.assertTrue(expectedLikesChocolate);
+    }
+
+    @Test
+    public void testSetHomeTown() {
+        String expectedHometown = "Portland";
+
+        Person person = new Person();
+
+        person.setHomeTown(expectedHometown);
+
+        String actualHomeTown = person.getHomeTown();
+        Assert.assertEquals(expectedHometown, actualHomeTown);
+    }
 }
